@@ -16,30 +16,34 @@ enter array element :- 5
 */
 
 #include<stdio.h>
-
-void main(){
-	
+void ak(){
 	int a[5][5];
-	int *ptr,i,j,c;
+	int *p,i,j,n;
 	
 	
 	printf("enter any number :- ");
-	scanf("%d",&c);
+	scanf("%d",&n);
 	
-		ptr = &a;	
 
-	for(i=0; i<c; i++){
-		for(j=0; j<c; j++){
+		p = &a;	
+
+
+	for(i=0; i<n; i++){
+		for(j=0; j<n; j++){
 			printf("enter array element :- ");
 				scanf("%d",&a[i][j]);
 	}
 }
 
-	for(i=0; i<c; i++){
-		for(j=0; j<c; j++){
-			printf(" cube of = %d  ",(*(ptr+a[i][j]))*(*(ptr+a[i][j]))*(*(ptr+a[i][j])),(ptr+a[i][j]));
+	for(i=0; i<n; i++){
+		for(j=0; j<n; j++){
+			printf("%d  ",(*(p+a[i][j]))*(*(p+a[i][j]))*(*(p+a[i][j])),(p+a[i][j]));
 		}
 		printf("\n");
 	}
+}
+void main(){
+	ak();
+	
 	
 }
